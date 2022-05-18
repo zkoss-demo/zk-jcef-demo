@@ -1,0 +1,20 @@
+<zk>
+	<listbox vflex="1" hflex="1" onSelect="@command('navigateToIndex', index=1)" selectedIndex="@load(resetSelection)">
+		<listhead>
+			<listheader label="Attribute"></listheader>
+			<listheader label="Value"></listheader>
+		</listhead>
+		<listitem>
+			<listcell label="User Name"></listcell>
+			<listcell label="@load(profile.userName)"></listcell>
+		</listitem>
+		<listitem>
+			<listcell label="Account activation date"></listcell>
+			<listcell label="@load(profile.activationDate)"></listcell>
+		</listitem>
+		<listitem>
+			<listcell label="Cool points"></listcell>
+			<listcell label="@load(profile.coolPoints)"></listcell>
+		</listitem>
+	</listbox>
+</zk>

@@ -1,0 +1,8 @@
+<zk>
+	<vlayout vflex="1">
+		<label value="scanable badge"/>
+		<div hflex="1" vflex="1">
+			<barcode type="qr" style="margin: 0 auto; display: block;" value="@load(profile.displayContent)" height="100%"/>
+		</div>
+	</vlayout>
+</zk>

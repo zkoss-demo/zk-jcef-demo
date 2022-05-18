@@ -1,0 +1,43 @@
+<zk>
+	<grid vflex="1" hflex="1">
+		<columns>
+			<column label="Attribute"></column>
+			<column label="Value"></column>
+		</columns>
+		<rows>
+			<row>
+				<cell>
+					<label value="User Name"></label>
+				</cell>
+				<cell>
+					<textbox value="@bind(profile.userName)" hflex="1"/>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<label value="Account activation date"></label>
+				</cell>
+				<cell>
+					<datebox value="@bind(profile.activationDate)" hflex="1"></datebox>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<label value="Cool points"></label>
+				</cell>
+				<cell>
+					<hlayout valign="middle">
+						<label value="@load(profile.coolPoints)"></label>
+						<separator orient="vertical" />
+						<slider onScrolling="" step="10" minpos="0" maxpos="100" curpos="@bind(profile.coolPoints)" hflex="1"></slider>
+					</hlayout>
+				</cell>
+			</row>
+			<row>
+				<cell colspan="2">
+					<button label="return to main screen" onClick="@command('navigateToIndex', index=0)" hflex="1"></button>
+				</cell>
+			</row>
+		</rows>
+	</grid>
+</zk>

@@ -1,0 +1,22 @@
+<zk>
+	<div hflex="1" vflex="1" viewModel="@id('vm')@init('org.zkoss.jcef.application.business.MainViewModel')">
+		<tabbox hflex="1" vflex="1" selectedIndex="@bind(vm.selectedTabIndex)">
+			<tabs visible="@load(vm.selectedTabIndex > 0)">
+				<tab label="Main"></tab>
+				<tab label="Data"></tab>
+				<tab label="Export"></tab>
+			</tabs>
+			<tabpanels hflex="1" vflex="1">
+				<tabpanel>
+					<apply profile="@load(vm.currentProfile)" templateURI="~./internal/mainScreen.zul" resetSelection="@load(vm.resetSelection)"></apply>
+				</tabpanel>
+				<tabpanel>
+					<apply profile="@load(vm.currentProfile)" templateURI="~./internal/dataScreen.zul"></apply>
+				</tabpanel>
+				<tabpanel>
+					<apply profile="@load(vm.currentProfile)" templateURI="~./internal/exportScreen.zul"></apply>
+				</tabpanel>
+			</tabpanels>
+		</tabbox>
+	</div>
+</zk>
